@@ -5,12 +5,21 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import InputNama from './components/InputNama';
+import KartuSiswa from './components/KartuSiswa';
+
 
 // Komponen testimoni
 import TestimonialForm from './components/TestimonialForm';
 import TestimonialQuote from './components/TestimonialQuote';
 
 function App() {
+
+    const dataSiswa = [
+{ nama: 'Kayla Reyvani', jurusan: 'SIJA' },
+{ nama: 'Raffi Akbar', jurusan: 'SIJA' },
+{ nama: 'Bima Aji', jurusan: 'SIJA' }
+];
+
   const [testimonials, setTestimonials] = useState([]);
 
   const handleAddTestimonial = (newTestimonial) => {
@@ -20,7 +29,10 @@ function App() {
   return (
     <>
       <Header />
+
+    
       <main style={styles.main}>
+
         {/* Komponen InputNama */}
         <section style={{ marginBottom: '40px' }}>
           <InputNama />
@@ -53,6 +65,18 @@ function App() {
           </div>
         </section>
       </main>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+      {dataSiswa.map((siswa, index) => (
+        <KartuSiswa
+          key={index}
+          nama={siswa.nama}
+          jurusan={siswa.jurusan}
+        />
+      ))}
+    </div>
+
+
       <Footer />
     </>
   );
