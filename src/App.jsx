@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header';
 import Footer from './components/Footer';
+import InputNama from './components/InputNama';
 
 function App() {
   return (
@@ -9,8 +10,7 @@ function App() {
 
     
       <main style={styles.main}>
-        <h2>Welcome to My Landing Page gesssssssssss!</h2>
-        <p>Halo.</p>
+        <InputNama />
       </main>
 
 
