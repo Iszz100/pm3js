@@ -6,10 +6,14 @@ function App() {
   return (
     <>
       <Header />
+
+    
       <main style={styles.main}>
         <h2>Welcome to My Landing Page gesssssssssss!</h2>
         <p>Halo.</p>
       </main>
+
+
       <Footer />
     </>
   );
