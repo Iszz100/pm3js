@@ -4,18 +4,20 @@ export default function Footer() {
 
   return (
     <footer style={styles.footer}>
-      <p>© {year} Louis Fachri Putra Jatmiko. All rights reserved.</p>
+      <p>© {year} Kelompok 2 Nabil dan Louis. All rights reserved.</p>
     </footer>
   );
 }
 
 const styles = {
   footer: {
-    marginTop: "40px",
-    padding: "20px",
+    position: "fixed",     // biar selalu nempel bawah
+    bottom: 0,
+    left: 0,
+    width: "100%",         // full width
+    backgroundColor: "#222",
+    color: "#fff",
     textAlign: "center",
-    backgroundColor: "#f4f4f4",
-    color: "#333",
-    borderTop: "1px solid #ddd"
+    padding: "15px 0",
   }
 };
