@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <main style={styles.main}>
-        <h2>Welcome to My Landing Page!</h2>
+        <h2>Welcome to My Landing Page gesssssssssss!</h2>
         <p>Halo.</p>
       </main>
       <Footer />
