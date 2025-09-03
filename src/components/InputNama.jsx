@@ -29,7 +29,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "10vh", // biar selalu full tinggi layar
+    minHeight: "80vh", // biar selalu full tinggi layar
     width: "100%", // biar full lebar layar
     fontFamily: "'Poppins', sans-serif",
     padding: "100px", // biar ada jarak di HP kecil
