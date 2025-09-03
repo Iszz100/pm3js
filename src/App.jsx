@@ -7,18 +7,16 @@ import Footer from './components/Footer';
 import InputNama from './components/InputNama';
 import KartuSiswa from './components/KartuSiswa';
 
-
 // Komponen testimoni
 import TestimonialForm from './components/TestimonialForm';
 import TestimonialQuote from './components/TestimonialQuote';
 
 function App() {
-
-    const dataSiswa = [
-{ nama: 'Kayla Reyvani', jurusan: 'SIJA' },
-{ nama: 'Raffi Akbar', jurusan: 'SIJA' },
-{ nama: 'Bima Aji', jurusan: 'SIJA' }
-];
+  const dataSiswa = [
+    { nama: 'Kayla Reyvani', jurusan: 'SIJA' },
+    { nama: 'Raffi Akbar', jurusan: 'SIJA' },
+    { nama: 'Bima Aji', jurusan: 'SIJA' }
+  ];
 
   const [testimonials, setTestimonials] = useState([]);
 
@@ -30,14 +28,12 @@ function App() {
     <>
       <Header />
 
-    
+      {/* Bagian InputNama - Center Full Layar */}
+      <section style={styles.heroSection}>
+        <InputNama />
+      </section>
+
       <main style={styles.main}>
-
-        {/* Komponen InputNama */}
-        <section style={{ marginBottom: '40px' }}>
-          <InputNama />
-        </section>
-
         {/* Komponen Testimoni */}
         <section className="testimonials-container">
           <h1 className="main-title">Halaman Testimoni</h1>
@@ -64,18 +60,21 @@ function App() {
             )}
           </div>
         </section>
+
+        {/* Komponen KartuSiswa */}
+        <section style={{ marginTop: '50px' }}>
+          <h2 className="section-title">Data Siswa</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+            {dataSiswa.map((siswa, index) => (
+              <KartuSiswa
+                key={index}
+                nama={siswa.nama}
+                jurusan={siswa.jurusan}
+              />
+            ))}
+          </div>
+        </section>
       </main>
-
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-      {dataSiswa.map((siswa, index) => (
-        <KartuSiswa
-          key={index}
-          nama={siswa.nama}
-          jurusan={siswa.jurusan}
-        />
-      ))}
-    </div>
-
 
       <Footer />
     </>
@@ -83,8 +82,15 @@ function App() {
 }
 
 const styles = {
+  heroSection: {
+    minHeight: '80vh',        // tinggi full layar
+    display: 'flex',
+    justifyContent: 'center',  // center horizontal
+    alignItems: 'center',      // center vertical
+    background: '#fff'
+  },
   main: {
-    padding: '40px',
+    padding: 'center',
     textAlign: 'center'
   }
 };
