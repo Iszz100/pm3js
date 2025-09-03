@@ -29,10 +29,10 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "80vh", // biar selalu full tinggi layar
+    minHeight: "100vh", // biar selalu full tinggi layar
     width: "100%", // biar full lebar layar
     fontFamily: "'Poppins', sans-serif",
-    padding: "100px", // biar ada jarak di HP kecil
+    padding: "10px", // biar ada jarak di HP kecil
     boxSizing: "border-box",
   },
   card: {
