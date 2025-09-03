@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #282c34;
+  color: #fff;
+  width: 100%;  /* Header full lebar */
+  box-sizing: border-box;  /* Biar padding tidak nambahin width */
+  position: fixed;  /* Nempel di atas */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 10px;
+  padding: 0px;  
+  margin: 0px;
+  font-size: 1.4rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
